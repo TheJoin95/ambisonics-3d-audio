@@ -3,6 +3,11 @@ from pydub import AudioSegment
 from pydub.generators import WhiteNoise
 from math import *
 from random import *
+import sys
+
+AudioSegment.converter = sys.argv[1] #ffmpeg installation exe dir path
+AudioSegment.ffmpeg = sys.argv[1] #ffmpeg installation exe dir path
+AudioSegment.ffprobe = sys.argv[2] #ffprobe installation exe dir path
 
 def calc_pan(index):
 	return cos(radians(index))
